@@ -61,7 +61,7 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'All':
         # use the index of the months list to get the corresponding int
-        months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        months = ['January', 'February', 'March', 'April', 'May', 'June']
         month_index = months.index(month)
         # filter by month to create the new dataframe
         df = df.loc[df['month'] == month_index+1]
@@ -81,7 +81,7 @@ def time_stats(df, month, day):
     # TO DO: display the most common month
     if month == "All":
         popular_month = df['month'].mode()[0]
-        months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        months = ['January', 'February', 'March', 'April', 'May', 'June']
         print('The most frequent month of travel is: ', months[popular_month-1])
         
     # TO DO: display the most common day of week
