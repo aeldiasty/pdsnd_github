@@ -170,14 +170,14 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        raw_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.')
+        raw_data = input('\nWould you like to see 5 lines of raw data? Enter "yes" or "no".')
         index1 = 0
         index2 = 0
         while raw_data == 'yes':
             index1 = index2
             index2 = index1 + 5
             print(df.iloc[index1:index2])
-            raw_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.')
+            raw_data = input('\nWould you like to see 5 lines of raw data? Enter "yes" or "no".')
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
